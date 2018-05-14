@@ -1,5 +1,5 @@
 import movie
-import fresh_tomatoes
+import netclipz
 
 
 black_panther = movie.Movie("Black Panther",
@@ -36,4 +36,4 @@ venom = movie.Movie("Venom",
 all_movies = [black_panther, infinity_war, deadpool2, solo, antman2, venom]
 
 
-fresh_tomatoes.open_movies_page(all_movies)
+netclipz.open_movies_page(all_movies)

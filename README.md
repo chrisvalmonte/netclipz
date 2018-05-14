@@ -17,6 +17,6 @@ I will not accept any pull requests.
 
 ## Dependencies
 * `Python 2.7`
-* `fresh_tomatoes.py`
+* `netclipz.py`, originally `fresh_tomatoes.py` pulled from starter project.
 * `Bootstrap 3.1.0`
 * `JQuery 1.10.1`

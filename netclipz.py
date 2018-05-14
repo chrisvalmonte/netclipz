@@ -9,7 +9,7 @@ main_page_head = '''
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Fresh Tomatoes!</title>
+    <title>Netclipz Movie Trailers</title>
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -18,6 +18,7 @@ main_page_head = '''
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
         body {
+            background-color: #111;
             padding-top: 80px;
         }
         #trailer .modal-dialog {
@@ -40,8 +41,17 @@ main_page_head = '''
             padding-top: 20px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
             cursor: pointer;
+        }
+        .movie-tile:hover > img {
+            transform: scale(1.1);
+        }
+        .movie-tile > img {
+            transition: transform 300ms ease-out;
+        }
+        .movie-tile > h2 {
+            color: #fff;
+            font-size: 20px;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -55,6 +65,11 @@ main_page_head = '''
             left: 0;
             top: 0;
             background-color: white;
+        }
+        .navbar-inverse .navbar-brand {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #f00;
         }
     </style>
     <script type="text/javascript" charset="utf-8">
@@ -107,7 +122,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand" href="#">Netclipz</a>
           </div>
         </div>
       </div>
@@ -152,7 +167,7 @@ def create_movie_tiles_content(movies):
 
 def open_movies_page(movies):
     # Create or overwrite the output file
-    output_file = open('fresh_tomatoes.html', 'w')
+    output_file = open('netclipz.html', 'w')
 
     # Replace the movie tiles placeholder generated content
     rendered_content = main_page_content.format(

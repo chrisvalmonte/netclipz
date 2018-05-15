@@ -2,6 +2,8 @@ import movie
 import netclipz
 
 
+# Instantiate movie objects to be displayed on the web page.
+
 black_panther = movie.Movie("Black Panther",
                             "After the death of his father, T'Challa returns"
                             " home to the African nation of Wakanda to take"
@@ -64,7 +66,9 @@ venom = movie.Movie("Venom",
                     "https://www.youtube.com/watch?v=u9Mv98Gr5pY")
 
 
+# Add all movie instances to a list of all movies
 all_movies = [black_panther, infinity_war, deadpool2, solo, antman2, venom]
 
 
+# Display all of the movies on a web page.
 netclipz.open_movies_page(all_movies)
